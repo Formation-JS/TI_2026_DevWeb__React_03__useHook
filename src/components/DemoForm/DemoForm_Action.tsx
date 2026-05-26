@@ -42,6 +42,10 @@ export default function DemoForm_Action() {
         <label htmlFor={id + 'dis'}>Télétravail : </label>
         <input id={id + 'dis'} type="checkbox" />
       </div>
+      <div>
+        <button type="submit">Valider</button>
+        <button type="reset">Effacer</button>
+      </div>
     </form>
   );
 }
