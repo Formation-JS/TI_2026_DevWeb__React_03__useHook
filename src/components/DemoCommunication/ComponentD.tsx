@@ -13,10 +13,8 @@ export default function ComponentD(
 
   return (
     <>
-
-    <input type='text' value={valueToSend} onChange={(e) => setValueToSend(e.target.value)}/>
-    <button onClick={addToList}>Add</button>
-
+      <input type='text' value={valueToSend} onChange={(e) => setValueToSend(e.target.value)}/>
+      <button onClick={addToList}>Add</button>
     </>
   )
 }

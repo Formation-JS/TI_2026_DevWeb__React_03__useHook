@@ -5,15 +5,21 @@ import ComponentC from './ComponentC.tsx';
 import ComponentD from './ComponentD.tsx';
 
 export default function Container(){
+  // Les données du parent pourront être distribué parmis les enfants
   const [value,setValue] = useState<string>('test')
   const [data , setData] = useState<string[]>(["hello"])
 
+  // Les methodes aussi pourront être accessible dans les composant enfants
   const addItem = (item : string) => {
     setData([...data,item])
   }
 
   const removeItem = (index : number) => {
     setData(data.filter((_,i) => i !== index))
+  }
+
+  const updateItem = (index : number,newValue : string) : void =>  {
+        setData(data.map((item,i) =>  i == index ? newValue : item))
   }
 
   return (
@@ -72,8 +78,9 @@ export default function Container(){
     </div>
 
     {/* Le composant C reçoit la liste depuis le parent */}
+    {/* Le composant C reçoit également l'accès à la methode de suppression d'un élément par son index */}
     <div className='card'>
-      <ComponentC data={data} removeItemChild={removeItem}/>
+      <ComponentC data={data} removeItemChild={removeItem} updateItemChild={updateItem}/>
     </div>
 
 

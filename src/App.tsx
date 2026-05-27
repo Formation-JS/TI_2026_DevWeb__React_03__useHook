@@ -1,4 +1,5 @@
 import './App.css';
+import { Card } from './components/DemoCommunication/card.tsx';
 import Container from './components/DemoCommunication/Container.tsx';
 import DemoForm_Action from './components/DemoForm/DemoForm_Action.tsx';
 import DemoForm_ActionState from './components/DemoForm/DemoForm_ActionState.tsx';
@@ -27,6 +28,8 @@ function App() {
         <h2>Communication entre composants</h2>
         
         <Container/>
+
+        <Card title='React' content="React c'est super" style='red'/>
 
 
     </>
