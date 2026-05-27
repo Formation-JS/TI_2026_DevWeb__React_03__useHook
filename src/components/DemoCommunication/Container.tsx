@@ -20,7 +20,7 @@ export default function Container(){
   <>
 
 <div>
-  <p>Dans un premier temps un récupère et affiche les informations dans le même composant</p>
+  <p>Dans un premier temps on récupère et affiche les informations dans le même composant</p>
 </div>
     {/* ============================ Etape 1 ======================== */}
     {/* Récupération et affichage d'une valeur dans le composant container */}
@@ -35,6 +35,8 @@ export default function Container(){
   <ul>
     <li>un composant pour afficher</li>
     <li>un composant pour récupérer une information de la remonter vers le parent</li>
+    <li>En typescript les paramètres devront être typé : {`{message } : {message :string }`} </li>
+    <li>Les paramètres peuvent être facultatif : {`{name = "test"} : {name?: string }`}</li>
   </ul>
 </div>
     {/* ============================ Etape 2 ======================== */}
